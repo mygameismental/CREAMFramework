@@ -4,7 +4,9 @@ import javax.lang.model.element.Element;
 
 public interface List {
 
+    //crud implementation
+
     public void contains(Object o);
-    public void getIndex(int index);
     public void add(Element e);
+    public void remove(int o);
 }
