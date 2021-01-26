@@ -2,32 +2,49 @@ package com.codedifferently.collections.map;
 
 
 import com.codedifferently.collections.interfaces.Map;
-import com.codedifferently.collections.list.ArrayList;
 
-public class UnsortedMap <K,V> implements Map<K,V>{
+import java.util.ArrayList;
 
+public class UnsortedMap implements Map{
+	private Entry entry;
+	private ArrayList <Entry> entries = new ArrayList<>();
 
 	public UnsortedMap() {
 
 	}
 
-	@Override
-	public V put(K key, V value) {
-		return null;
-	}
-
-	@Override
-	public V remove(Object key) {
-		return null;
-	}
-
-	@Override
-	public boolean containsKey(Object key) {
-		return false;
-	}
-
 	public int size(){
-		return 0;
+		return entries.size();
 	}
 
+	public String display(){
+		StringBuilder stringBuilder = new StringBuilder();
+		for(Entry entry: entries){
+			stringBuilder.append(entry.getKey()).append(",").append(entry.getValue()).append("\n");
+		}
+		return stringBuilder.toString().trim();
+	}
+
+	@Override
+	public ArrayList<Entry> put(Integer key, String value) {
+		entry = new Entry(key,value);
+		entries.add(entry);
+		return entries;
+	}
+
+	@Override
+	public void remove(Integer key) {
+		entries.removeIf(entry -> entry.getKey().equals(key));
+	}
+
+	@Override
+	public boolean containsKey(Integer key) {
+		boolean doesContain = false;
+		for (Entry entry:entries) {
+			if(entry.getKey().equals(key)){
+				doesContain = true;
+			}
+		}
+		return doesContain;
+	}
 }
