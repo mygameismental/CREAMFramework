@@ -5,6 +5,11 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Alberto's property
+ * read at your own discretion
+ * you may go blind
+ */
 class UnsortedMapTest {
 
 	private UnsortedMap unsortedNames;
