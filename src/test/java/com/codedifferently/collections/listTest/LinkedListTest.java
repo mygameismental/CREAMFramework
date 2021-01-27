@@ -1,16 +1,38 @@
 package com.codedifferently.collections.listTest;
 
 import com.codedifferently.collections.list.LinkedList;
-import org.junit.Assert;
 import org.junit.Test;
 
-public class LinkedListTest {
-    @Test
-    public void nodeFrontTest(){
-        LinkedList linkedList = new LinkedList(25, null);
-        String expected = 25 + "";
-        String actual = linkedList.nodeFront();
+import static org.junit.Assert.*;
 
-        Assert.assertEquals(expected, actual);
+public class LinkedListTest {
+
+    @Test
+    public void contains() {
+    }
+
+    @Test
+    public void printNodeContents() {
+    }
+
+    @Test
+    public void addHead() {
+    }
+
+    @Test
+    public void addTail() {
+    }
+
+    @Test
+    public void deleteHead() {
+    }
+
+    @Test
+    public void deleteTail() {
+    }
+
+    @Test
+    public void main() {
+        LinkedList linkedList = new LinkedList();
     }
 }
