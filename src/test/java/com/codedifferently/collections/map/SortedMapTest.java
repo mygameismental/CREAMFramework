@@ -4,12 +4,6 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-/**
- * Alberto's property
- * read at your own discretion
- * you may go blind
- *
- */
 class SortedMapTest {
 
 	private SortedMap sortedMap;

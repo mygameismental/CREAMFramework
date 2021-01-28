@@ -4,12 +4,7 @@ package com.codedifferently.collections.map;
 import com.codedifferently.collections.interfaces.Map;
 import java.util.ArrayList;
 
-/**
- * Alberto's property
- * read at your own discretion
- * you may go blind
- *
- */
+
 public class UnsortedMap implements Map{
 	private Entry entry;
 	protected ArrayList <Entry> entries = new ArrayList<>();

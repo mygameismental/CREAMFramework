@@ -4,12 +4,7 @@ package com.codedifferently.collections.map;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-/**
- * Alberto's property
- * read at your own discretion
- * you may go blind
- *
- */
+
 public class SortedMap extends UnsortedMap {
 
 

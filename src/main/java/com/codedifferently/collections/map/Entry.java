@@ -1,11 +1,6 @@
 package com.codedifferently.collections.map;
 
-/**
- * Alberto's property
- * read at your own discretion
- * you may go blind
- *
- */
+
 
 public class Entry {
 	private String value;
