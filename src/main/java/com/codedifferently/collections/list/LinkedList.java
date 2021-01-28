@@ -6,33 +6,20 @@ import org.w3c.dom.Node;
 import javax.lang.model.element.Element;
 
 public class LinkedList<E>  { //singly linked list
-    private Node head; //head node to hold the list
+    public Node head; //head node to hold the list
 
-    private static class Node{
-        private int data;
-        private Node next;
+    public static class Node{
+        public int data;
+       public Node next = null;
 
-        public Node(int data){
-            this.data = data;
-            this.next = null;
-        }
-    }
+        public Node(int value) {
 
-    public boolean contains(){ //checking to see if node contains a value or not
-        Node content = head;
-        if(content == null){ //if head is null, then it means linked list is empty
-            return false;
-        }
-        return true;
-    }
+       }
 
-    public void printNodeContents(){ //prints node content
-        Node print = head;
-        while(print != null){
-            System.out.println(print.data + " --> ");
-            print = print.next;
-        }
-        System.out.println("null value");
+      //   public Node(int data){
+        //   this.data = data;
+          //  this.next = null;
+        // }
     }
 
     public void addHead(int value){ //adds value to head node
@@ -54,6 +41,27 @@ public class LinkedList<E>  { //singly linked list
         }
         currentNode.next = newNode;
     }
+
+
+    public boolean contains(){ //checking to see if node contains a value or not
+        Node content = head;
+        if(content == null){ //if head is null, then it means linked list is empty
+            System.out.print("List is Empty");
+            return false;
+        }
+        System.out.print("List is not Empty");
+        return true;
+    }
+
+    public void printNodeContents(){ //prints node content
+        Node print = head;
+        while(print != null){
+            System.out.println(print.data + " --> ");
+            print = print.next;
+        }
+        System.out.println("null value");
+    }
+
 
     public Node deleteHead()throws EmptyLinkedListException{
         if(head ==null){
@@ -81,21 +89,14 @@ public class LinkedList<E>  { //singly linked list
         return current;
     }
 
-        public static void main(String[] args) {
+        // public static void main(String[] args) {
         //creating a linked list (Hard coding the linked list)
-        // 18 --> 21 --> 24 --> 15 --> 12 --> null
-        LinkedList.Node head = new LinkedList.Node(18);
-        LinkedList.Node second = new LinkedList.Node(21);
-        LinkedList.Node third = new LinkedList.Node(24);
-        LinkedList.Node fourth = new LinkedList.Node(15);
-        LinkedList.Node fifth = new LinkedList.Node(12);
-
-        //attach them together to form a list
-        head.next = second; // 18 --> 21
-        second.next = third; // 18 --> 21 --> 24
-        third.next = fourth; // 18 --> 21 --> 24 --> 15
-        fourth.next = fifth; // 18 --> 21 --> 24 --> 15 --> 12 --> null
 
 
-    }
+
+      //  third.next = fourth; // 18 --> 21 --> 24 --> 15
+      //   fourth.next = fifth; // 18 --> 21 --> 24 --> 15 --> 12 --> null
+
+
+    // }
 }
